@@ -18,7 +18,7 @@
 - 10.[雾](Word/fog.md)
 - 11.[Main设置](Word/main.md)
 - 12.[阴影](Word/shadow.md)
-- 13.[轮廓](Word/outline.md)
+- 13.[轮廓线](Word/outline.md)
 - 14.[扩展](Word/extension.md)
 - 15.[HDR贴图处理工具&IES处理工具](Word/tool.md)
 

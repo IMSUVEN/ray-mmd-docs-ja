@@ -10,7 +10,7 @@
     | :----------------- | :--- |
     | LICENSE.txt        | Ray-mmd的MIT许可证</br>既Ray-MMD的使用协议</br>介绍页下有说明 |
     | `README.md`        | Ray-mmd的英文说明 |
-    | ray.conf           | ray-mmd的全局设置</br>有关全局设置的详细说明请看[全局设置和MME效果分配](word/Conf.md)|
+    | ray.conf           | ray-mmd的全局设置</br>有关全局设置的详细说明请看5.[全局设置和MME效果分配](Conf.md)|
     | ray_advanced.conf  | ray-mmd的另一个全局设定，基本不需要改动 |
     | ray.x              | 用来加载ray.fx |
     | ray.fx             | ray-mmd的本体文件 |
@@ -18,124 +18,122 @@
 
 * ## Extension文件夹
 
-    * 　追加のエフェクト等のフォルダ。多くのものは別プロジェクトになっており、 ray-mmd専用でないものは、単体で使用できます。詳細は「14.エクステンション」を参照してください。  
-    ライトブルームとアンチエイリアス、色調補正はray-mmd本体に組み込まれたものもあります。これらについては、「5.グローバル設定」「6.ray_controller」を参照してください。
+    * 　该文件夹下的MME为独立的MME，它们有的可以在无Ray的时候使用，有的只能在使用了Ray的时候使用。具体请参照14.[扩展](extension.md)
 
-    | フォルダ名    | 説明                                             | ray-mmd専用？ |
+    |文件夹名    | 说明                                             | ray-mmd专用？ |
     | :------------ | :----------------------------------------------- | :------------ |
-    | ColorGrading  | 色調整用                                         | No            |
-    | Debug         | デバッグ用                                       | Yes           |
-    | DummyScreen   | MMDのスクリーン用キャプチャを行う                | Yes           |
-    | FXAA          | アンチエイリアス                                 | No            |
-    | LightBloom    | 明るい部分が周囲に溢れ出す現象を模したエフェクト | No            |
-    | OpticalFlares | レンズフレアを模したエフェクト                   | No            |
-    | SMAA          | アンチエイリアス                                 | No            |
-    | Spectrum      | サウンドの周波数を元にしたビジュアルエフェクト   | No            |
-    | StereoImage   | 立体視エフェクト                                 | No            |
+    | ColorGrading  | 用于颜色调整                                         | No            |
+    | Debug         | 用于调试                                       | Yes           |
+    | DummyScreen   | 用于MMD屏幕捕获                | Yes           |
+    | FXAA          | FXAA抗锯齿                                 | No            |
+    | LightBloom    | 模拟明亮部分溢出环境的效果  | No            |
+    | OpticalFlares | 模拟镜头光晕的效果                 | No            |
+    | SMAA          | SMAA抗锯齿                                 | No            |
+    | Spectrum      | 音频频谱   | No            |
+    | StereoImage   | 立体效果                                 | No            |
 
-* ## Fogフォルダ
-    * フォグ（霧）の効果を追加します。詳細については「10.フォグ」を参照してください。
+* ## Fog文件夹
+    * 添加雾的效果，具体请参考10.[雾](fog.md)
 
-    | ファイル名           | 説明                                  |
+    | 文件名名           | 说明                                  |
     | :------------------- | :------------------------------------ |
-    | AtmosphericFog.pmx   | 大気フォグ                            |
-    | GroundFog.pmx        | 地面（高さ）フォグ                    |
-    | VolumetricCube.pmx   | ボリュームフォグ　キューブ型          |
-    | VolumetricSphere.pmx | ボリュームフォグ　球状                |
+    | AtmosphericFog.pmx   | 大气雾                           |
+    | GroundFog.pmx        | 地面雾                    |
+    | VolumetricCube.pmx   | 体积雾　立方体型          |
+    | VolumetricSphere.pmx | 体积雾　球球状                |
 
 
-* ## Lightingフォルダ
-    * 追加用の光源。詳細については「9.ライト」を参照してください。
+* ## Lighting文件夹
+    * 额外光源。具体请参考9.[光源](light.md)
 
-    | ファイル名           | 説明                                  |
+    | ファイル名           | 说明                                  |
     | :------------------- | :------------------------------------ |
-    | DirectionalLight.pmx | 指向性ライト                          |
-    | LED.pmx              | 画像や動画を表示する平面ライト        |
-    | PointLight.pmx       | ポイントライト                        |
-    | PointLightIES.pmx    | IES(配光データ)に基づくポイントライト |
-    | RectangleLight.pmx   | 矩形の平面ライト                      |
-    | SphereLight.pmx      | 球状のライト                          |
-    | SpotLight.pmx        | スポットライト                        |
-    | SpotLightIES.pmx     | IES(配光データ)に基づくスポットライト |
-    | TubeLight.pmx        | チューブ型のライト                    |
+    | DirectionalLight.pmx | 定向光                        |
+    | LED.pmx              | 平面灯光显示图像和电影     |
+    | PointLight.pmx       | 点光源|
+    | PointLightIES.pmx    | 基于IES的点光源 |
+    | RectangleLight.pmx   | 矩形平面光                      |
+    | SphereLight.pmx      | 球形光                          |
+    | SpotLight.pmx        | 聚光灯                       |
+    | SpotLightIES.pmx     | 基于IES的聚光灯 |
+    | TubeLight.pmx        | 管状灯                    |
 
-* ## Mainフォルダ
+* ## Main文件夹
 
-    * 　MMEの「Main」タブに設定用の.fx。.fx内の設定パラメータについては「11.Main」を参照してください。
+    * 　在MME的“Main”选项卡中进行设置。有关Main选项卡的设置请参考5.[全局设置和MME效果分配](conf.md)。有关.fx中的设置参数，请参考11.[Main设置](main.md)
 
-    | ファイル名             | 説明 |
+    | 文件名             | 说明 |
     | :--------------------- | :--- |
-    | main.fx                | デフォルトで設定するファイル |
-    | main.fxsub             | main用のコード。ユーザーが編集する必要は無い。 |
-    | main_ex_alpha.fx       | main_ex_～はmain.fxのパラメータを書き換えたプリセット |
-    | main_ex_mask.fx        |  |
-    | main_ex_noalpha.fx     |  |
-    | main_ex_with_sphmap.fx |  |
+    | main.fx                | 默认配置文件|
+    | main.fxsub             | 代码文件，无需编辑 |
+    | main_ex_alpha.fx       | 含有透明的材质 |
+    | main_ex_mask.fx        | 含有遮蔽的材质 |
+    | main_ex_noalpha.fx     | 无透明的材质 |
+    | main_ex_with_sphmap.fx | 含有sph贴图的材质 |
 
-* ## Materialsフォルダ
-    * モデルの見た目、質感を決定するマテリアル（材質）設定のプリセットがあり、「MaterialMap」タブに設定します。よりモデルに合った質感を設定するには、fxファイルの中身を編集する必要があるでしょう。詳細については「8.マテリアル」を参照してください。
+* ## Materials文件夹
+    * 具体情况请参考8.[材质设定](materials.md)
 
-    | ファイル名                | 説明             |
+    | ファイル名                | 说明             |
     | :------------------------ | :--------------- |
-    | material_2.0.fx           | デフォルトのマテリアル設定ファイル |
-    | material_common_2.0.fxsub | マテリアル用のコード |
-    | material_skybox.fx        | スカイボックス用のマテリアル |
-    | `README.md`                 | マテリアルファイルの設定が書かれたファイル(英語) |
-    | README_chs.md             | マテリアルファイルの設定が書かれたファイル(中国語) |
+    | material_2.0.fx           | 默认材质配置文件 |
+    | material_common_2.0.fxsub | 代码文件，无需更改 |
+    | material_skybox.fx        | Skybox配置文件 |
+    | `README.md`                 | 材质说明 英语 |
+    | README_chs.md             | 材质说明 中文 |
 
-    | フォルダ名   | 説明                                         |
+    | 文件夹名   | 说明                                         |
     | :----------- | :------------------------------------------- |
-    | _MaterialMap | マテリアル用のマップファイル                 |
-    | ClearCoat    | クリアコートのプリセットマテリアル           |
-    | Cloth        | 布のプリセットマテリアル                     |
-    | Editor       | コントローラーで設定値を変更できるマテリアル |
-    | Emissive     | エミッシブ(発光表現)のプリセットマテリアル   |
-    | Hair         | 髪用のプリセットマテリアル                   |
-    | Metallic     | メタリックのプリセットマテリアル             |
-    | Programmable | 海、ウェット表現のマテリアル                 |
-    | Skin         | 肌用のプリセットマテリアル                   |
-    | Subsurface   | サブサーフェスのプリセットマテリアル         |
-    | Transparent  | 透過のプリセットマテリアル                   |
-    | Video        | ビデオ・スクリーン用のプリセットマテリアル   |
+    | _MaterialMap | 自带贴图                |
+    | ClearCoat    | 涂层预设         |
+    | Cloth        | 衣料预设                     |
+    | Editor       | 可表情控制属性的材质预设|
+    | Emissive     | 自发光材质预设   |
+    | Hair         | 头发材质预设                   |
+    | Metallic     | 金属材质预设|
+    | Programmable | 水、海材质预设|
+    | Skin         | 皮肤材质预设|
+    | Subsurface   | 表面材质预设|
+    | Transparent  | 透明材质预设                   |
+    | Video        | 视频屏幕材质预设 |
 
-* ## Outlineフォルダ
-    * アウトライン(エッジ)描画用。「OutlineMap」タブ（ray.confの設定が必要）に設定します。詳細については「13.アウトライン」を参照してください。
+* ## Outline文件夹
+    * 轮廓线设置。具体请参考13.[轮廓线](outline.md)
 
-    | ファイル名     | 説明             |
+    | 文件名     | 说明             |
     | :------------- | :--------------- |
-    | Fixed Color    | 各フォルダには線の太さと色が違うプリセットがある |
-    | Fixed Color x1 |  |
-    | Fixed Color x2 |  |
-    | Fixed Color x3 |  |
+    | Fixed Color    | 正常轮廓线预设 |
+    | Fixed Color x1 | x1粗的轮廓线预设 |
+    | Fixed Color x2 | x2粗的轮廓线预设 |
+    | Fixed Color x3 | x3粗的轮廓线预设 |
 
 
-* ## Shaderフォルダ
-    * ray-mmdのレンダリングに必要なコード。ユーザーが編集する必要はありません。
+* ## Shader文件夹
+    * 渲染所需代码，无需编辑。
 
-* ## Shadowフォルダ
-    * PSSMとSSAO用の設定用.fx。詳細は「12.シャドウ」を参照してください。
+* ## Shadow文件夹
+    * 用于阴影的设置。详细情况请参考12.[阴影](shadow.md)
 
-    | ファイル名                  | 説明             |
+    | 文件名                  | 说明            |
     | :-------------------------- | :--------------- |
-    | PSSM1～4.fx                 | PSSMの設定       |
-    | SSAO visibility 0.0～1.0.fx | SSAOの濃さを「SSAOMap」タブに設定<br>デフォルトは1.0 |
+    | PSSM1～4.fx                 | PSSM设置      |
+    | SSAO visibility 0.0～1.0.fx | SSAO密度设置 |
 
-* ## Skyboxフォルダ
-    * MMDで言うところのスカイドームの代わりになるもの。Skyboxからの光の強さを環境光として使用しています。幾つかのSkyboxが有りますが、イメージベースのものは自作することも可能です。  
-    詳細については「7.スカイボックス」を参照してください。
+* ## Skybox文件夹
+    * MMD天空球预设，用作环境光源提供。详细请参考7.[天空球控制](skybox.md)
 
-    | フォルダ名         | 説明             |
+    | 文件夹名         | 说明            |
     | :----------------- | :--------------- |
-    | Helipad GoldenHour | イメージベースのSkybox |
-    | Sky Hemisphere     | 高さ（ハイ、ミッド、ロー）で色が変えられるSkybox<br>単色やグラデーションの背景の代わりにもなる |
-    | Sky Night          | 星空のSkybox |
-    | Time of day        | 昼間のSkybox　流れる雲がある |
-    | Time of night      | 夜空のSkybox　流れ星がある |
+    | Helipad GoldenHour | 提供的预设HDR的天空球 |
+    | Sky Hemisphere     | 纯色天空球，也可以做渐变天空，其中颜色可以通过高度改变 |
+    | Sky Night          | 静态夜晚天空球 |
+    | Time of day        | 动态白天天空球 |
+    | Time of night      | 动态夜晚天空球 |
 
-* ## Toolsフォルダ
-    * ray-mmdが使用するファイルを作成（変換）するツール。詳細は「15.Tools」を参照してください。
+* ## Tools文件夹
+    * 与Ray-mmd相关的工具。详细情况请参考15.[HDR贴图处理工具&IES处理工具](tool.md)
 
-    | ファイル名          | 説明             |
+    | 文件名          | 説明             |
     | :------------------ | :--------------- |
-    | cmft_rgbt_x1024.zip | HDRをSkybox用に変換するツール。|
-    | IES2HDR.zip         | IES(配光データ)ファイルをHDRに変換するツール。<br>ポイントライト、スポットライトで使用できる。 |
+    | cmft_rgbt_x1024.zip | 将HDR贴图转换为Skybox的工具|
+    | IES2HDR.zip         | 将IES转换为HDR的工具，可用于点光源和聚光灯 |
