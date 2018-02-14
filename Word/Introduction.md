@@ -1,22 +1,21 @@
-# RAY的介绍 #
+# Ray的介绍
 [返回目录](../README.md)
-- ### 关于本说明文档的观看说明 ###
+- ### 关于本说明文档的观看说明
 ------------
 　在本说明文档中将会出现许多专业术语，有一部分会贴有解释说明，还有一部分需要您自己Baidu或者Google
-- ### 基于物理的渲染 ###
+- ### 基于物理的渲染
 ------------
-
 　Ray-MMD是Rui（github账户：@ray-cast，Twitter：[Rui_cg](https://twitter.com/Rui_cg)），用hlsl语言所写，基于MikuMikuEffect的一个渲染库
 　目前Ray已经更新到了稳定版1.5.0，并且在不断的更新新的功能和效果。
 　如果您喜欢这个渲染，希望您可以[赞助作者](https://github.com/ray-cast/ray-mmd/blob/master/README_chs.md)，你的帮助将能使这个渲染走的更远
 
-- ### Ray的系统需求 ###
+- ### Ray的系统需求
 ------------
 * [MikuMikuDance](http://www.geocities.jp/higuchuu4/index_e.htm) - 926ver (x64) (没有抗锯齿)
 * [MikuMikuEffect](https://bowlroll.net/file/35012) - 037ver (x64)
 * Direct3D 9 With Shader Model 3.0 (ps_3_0)
 
-- ### 特性 ###
+- ### 特性
 ------------
 * 基于物理的材质: 基本色, 金属性, 光滑/粗糙度, 反射率, 自发光, 等 
 * 模拟清漆的多层材质 
