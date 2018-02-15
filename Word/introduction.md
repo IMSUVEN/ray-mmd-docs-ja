@@ -3,7 +3,7 @@
 - ### 关于本说明文档的观看说明
 ------------
 　在本说明文档中将会出现许多专业术语，有一部分会贴有解释说明，还有一部分需要您自己Baidu或者Google
-- ### 基于物理的渲染
+- ### 基于物理的渲染 
 ------------
 　Ray-MMD是Rui（github账户：@ray-cast，Twitter：[Rui_cg](https://twitter.com/Rui_cg)），用hlsl语言所写，基于MikuMikuEffect的一个渲染库
 　目前Ray已经更新到了稳定版1.5.0，并且在不断的更新新的功能和效果。
@@ -70,3 +70,4 @@
 	MIT的内容可依照程序著作权者的需求更改内容。此亦为MIT与BSD（The BSD license, 3-clause BSD license）本质上不同处。
 	MIT条款可与其他授权条款并存。另外，MIT条款也是自由软件基金会（FSF）所认可的自由软件授权条款，与GPL兼容
 
+[下一页 2.下载](download.md)

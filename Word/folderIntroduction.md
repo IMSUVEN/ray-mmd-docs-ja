@@ -66,9 +66,9 @@
     | :--------------------- | :--- |
     | main.fx                | 默认配置文件|
     | main.fxsub             | 代码文件，无需编辑 |
-    | main_ex_alpha.fx       | 含有透明的材质 |
-    | main_ex_mask.fx        | 含有遮蔽的材质 |
-    | main_ex_noalpha.fx     | 无透明的材质 |
+    | main_ex_alpha.fx       | 11.[Main设置](main.md) |
+    | main_ex_mask.fx        | 没什么用 |
+    | main_ex_noalpha.fx     | 请看11.[Main设置](main.md) |
     | main_ex_with_sphmap.fx | 含有sph贴图的材质 |
 
 * ## Materials文件夹
@@ -137,3 +137,5 @@
     | :------------------ | :--------------- |
     | cmft_rgbt_x1024.zip | 将HDR贴图转换为Skybox的工具|
     | IES2HDR.zip         | 将IES转换为HDR的工具，可用于点光源和聚光灯 |
+
+[下一页 4.入门使用](started.md)
