@@ -1,4 +1,4 @@
-# Ray的介绍
+# ·Ray的介绍
 [返回目录](../ReadMe.md) 
 - ### 关于本说明文档的观看说明
 ------------
@@ -70,4 +70,4 @@
 	MIT的内容可依照程序著作权者的需求更改内容。此亦为MIT与BSD（The BSD license, 3-clause BSD license）本质上不同处。
 	MIT条款可与其他授权条款并存。另外，MIT条款也是自由软件基金会（FSF）所认可的自由软件授权条款，与GPL兼容
 
-[下一页 2.下载](download.md)
+[下一章 2.下载](download.md)

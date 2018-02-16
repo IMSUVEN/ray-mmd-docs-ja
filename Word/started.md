@@ -1,13 +1,13 @@
 # ·Ray的入门使用
 [返回目录](../ReadMe.md) 
-
+[上一章 3.各文件夹说明](folderIntroduction.md)
 ## 说明
 　这一页是为了帮助你快速入门Ray的载入，请按照以下步骤来载入Ray，因为是入门使用，所以更多高端的使用方法请参考每章的说明。
 
 ## 载入Ray-mmd
 
 - ### 1.ray.x的载入  
-    通过附件载入ray.x或者直接将ray.x拖入MMD中
+    通过附件载入`ray.x`或者直接将`ray.x`拖入MMD中
 
     ![4_1_1](../Pic/4_1_1.png "ray.x的载入")
     
@@ -20,66 +20,70 @@
 
     ![4_2_1](../Pic/4_2_1.png "抗锯齿功能等关闭或开启")
 
-3. スカイボックスを追加する  
-    Skyboxフォルダの中から、任意のスカイボックスを追加します。詳細については「7. スカイボックス」を参照してください。  
-    　ここでは、「Helipad GoldenHour」を追加してみます。
+	开启或关闭后的样子
+	![4_2_2](../Pic/4_2_2.png "抗锯齿功能等关闭或开启后")
 
-    1. 「Skybox\Helipad GoldenHour」フォルダを開き`Sky with box.pmx`をMMDに追加します。
+- ### 3. 天空球的载入  
+    从Skybox文件夹添加天空球。详细情况请参考7.[天空球控制](skybox.md)。
+	这里我们载入Helipad GoldenHour文件夹的天空球
 
-        ![4_3_1](images/4_3_1.png "Sky with box.pmx を追加")
+    1. 打开“「Skybox\Helipad GoldenHour」”文件夹并将`Sky with box.pmx`添加到MMD。
 
-    2. MMDの「モデル描画順」で一番上に。(これはスカイボックス共通の操作)
+        ![4_3_1](../Pic/4_3_1.png "Sky with box.pmx的载入")
 
-        ![4_3_2](images/4_3_2.png "Skyboxを「モデル描画順」で一番上に")
+    2. 在菜单栏-背景-模型描画顺序&模型计算顺序中将skybox放到顶部
 
-    3. `Sky with lighting.fx`を「EnvLightMap」でスカイボックスに割り当てます。（デフォルトでは`skylighting_none.fx`が割り当てられています。）
+        ![4_3_2](../Pic/4_3_2.png "Skybox的描画顺序调整")
 
-        ![4_3_3](images/4_3_3.png "「EnvLightMap」に割り当て")
+    3. 在「EnvLightMap」将`Sky with lighting.fx`分配给skybox。（默认情况下，skybox分配的是`skylighting_none.fx`。）
 
-    ※ 割り当てるfxは必ず同じフォルダのものを割り当てて下さい。別フォルダのものを割り当てると、Skyboxからのライティングが正しいものになりません。
+        ![4_3_3](../Pic/4_3_3.png "「EnvLightMap」的分配")
 
-4. モデルを追加する  
-    MMDに任意のキャラクター、ステージを追加し、MMEの「Main」タブでモデルを選択して`main\main.fx` を割り当てます。  
-    ※　複数のモデルを選択する場合、ShiftキーやCtrlキーが利用できます。
+    ※ 请确定`.fx`和skybox是同一个文件夹下中的，如果是不同文件夹的会导致光照信息不正确。
 
-    ![4_4_1](images/4_4_1.png "「Main」タブにて `main\main.fx` を割り当て")
+- ### 4. 添加模型  
+    向MMD中添加模型、场景等，并在MME的「Main」的一栏为他们分配`main\main.fx` 。  
+    ※　可以使用Shift和Ctrl进行多选。
 
-    　「Main」タブに`main\main.fx` を割り当てると、「MaterialMap」タブに `Materials\material_2.0.fx` がデフォルトマテリアルとして割り当てられます。  
-    　マテリアルの設定は、「MaterialMap」にマテリアルのfxを割り当てることによって行います。
+    ![4_4_1](../Pic/4_4_1.png "在「Main」为模型分配 `main\main.fx` ")
+
+    　当在「Main」为模型分配`main\main.fx` 后，在「MaterialMap」会默认的为模型分配 `Materials\material_2.0.fx` 。  
+    　在之后章我们会讲解通过「MaterialMap」为模型的不同部位设置不同的材质。
 
     * 注意：  
-    拡張子 `.x` ファイルのもの（アクセサリやステージなど）は対応していません。PMXへ変換する場合は、規約を確認してから行いましょう。
+    Ray不支持`.x`格式的模型，需要您将其转换为`.pmx`格式的模型。。
 
-5. ray_controller.pmxを追加する  
-    `ray_controller.pmx`をMMDにドラッグアンドドロップで追加します。  
+- ### 5. ray_controller.pmx的载入  
+    将`ray_controller.pmx`按之前的方式在MMD中载入。  
 
-    ![4_5_1](images/4_5_1.png "ray_controller.pmxをMMDに追加")
+    ![4_5_1](../Pic/4_5_1.png "ray_controller.pmx的载入")
 
-    このコントローラーを使う事により、ライトやSSAO、ブルーム、色調等の調整ができます。
+    通过这个模型的表情作为控制器，你可以调整灯光、阴影、色调等。
 
-6. ここまでで必要最低限の設定が完了です。  
-    必要に応じてマテリアル、ライト、エフェクト等の追加を行いますが、これらについては各項目の説明を参照してください。
+- ### 6.到这里，我们就完成了入门的设置过程。  
+    我们会根据需要添加其他的东西，并修改效果。具体请参考后面的章节。
+    此刻我们已经完成了入门的设置过程。
+    ![4_6_1](../Pic/4_6_1.png "入门的设置完成")
 
-    此処までの結果にメインライトの調整を行ったもの。
-    ![4_6_1](images/4_6_1.png "此処までの結果")
+* ### 关于添加顺序
+    　添加顺序不一定要按照上面的方法进行。可以全部添加完了以后，在菜单栏-背景-附件控制中，将ray.x置于顶部，在菜单栏-背景-模型描画顺序&模型计算顺序中将skybox放到顶部。
 
-* ### 描画順について
-    　追加の順番はこの説明の順番通りでなくてもかまいません。  
-    先にモデルやモーションなどをセットアップした後にray-mmdを追加した場合、「モデルの描画順」でスカイボックスのpmxが一番上、「アクセサリ編集」で`ray.x`が一番上になるように再設定すれば問題ありません。  
+* ### 当显示不如预想时
+    在我们载入的时候，可能因为载入错误等情况，导致我们的显示出现了问题。请看以下图片确定你遇到的问题。
 
-* ### 表示が上手く行かない場合
-    大抵の場合、割り当てるfxとタブを間違えている事が多いです。慌てずしっかり確認してみましょう。間違った設定を正しく設定し直した後、「MMEffect」メニューから「全て更新」が必要な時もあります。
+    * 没有被光找到的地方变成了黑色。  
+        Skybox的「EnvLightMap」选项忘记设置。
+    ![4_7_1](Pic/NoSkyLighting.png "EnvLightMap忘记设置")
 
-    * ライトに照らされていない場所が真っ黒になる。  
-        Skyboxの「EnvLightMap」タブへの設定し忘れ。
-    ![4_7_1](images/NoSkyLighting.png "EnvLightMapタブへの設定し忘れ")
-
-    * 表示が緑や紫になる。  
-        マテリアルのfxやskyboxのライティング用のfxを「Main」タブに割り当ててしまった場合。割と多い事例だと思います。  
-        下の図は`Sky with lighting.fx`を「Main」タブに設定してしまった例。この場合は一度Skyboxを削除し、再度追加の手順を行ったほうが早いと思います。
-    ![4_7_1](images/SkyLighting2Main.png "Sky with lighting.fxを「Main」タブに設定")
+    * 显示为绿色或紫色。  
+        在之前载入的过程中，你可能错将Sky with lighting.fx分配到了「Main」。您最好先删掉skybox，然后重新载入Skybox。
+    ![4_7_1](Pic/SkyLighting2Main.png "Sky with lighting.fx在「Main」没有设置")
 
 -----
 
-<small> Model : Hatsune Miku V4X Model by Digitrevx / 屋上風ステージ by KTY</small>
+<small> Model : Hatsune Miku V4X Model by Digitrevx / 屋上風ステージ by KTY
+感谢gaj-cg教程中出现的大部分图片可以直接使用
+其中一些图片为我自己截图制作
+</small>
 
+[下一章 5.全局设置和MME效果分配](conf.md)
