@@ -1,5 +1,6 @@
 # ·Ray的入门使用
 [返回目录](../ReadMe.md) 
+</br>
 [上一章 3.各文件夹说明](folderIntroduction.md)
 ## 说明
 　这一页是为了帮助你快速入门Ray的载入，请按照以下步骤来载入Ray，因为是入门使用，所以更多高端的使用方法请参考每章的说明。
@@ -73,11 +74,11 @@
 
     * 没有被光找到的地方变成了黑色。  
         Skybox的「EnvLightMap」选项忘记设置。
-    ![4_7_1](Pic/NoSkyLighting.png "EnvLightMap忘记设置")
+    ![4_7_1](../Pic/NoSkyLighting.png "EnvLightMap忘记设置")
 
     * 显示为绿色或紫色。  
         在之前载入的过程中，你可能错将Sky with lighting.fx分配到了「Main」。您最好先删掉skybox，然后重新载入Skybox。
-    ![4_7_1](Pic/SkyLighting2Main.png "Sky with lighting.fx在「Main」没有设置")
+    ![4_7_1](../Pic/SkyLighting2Main.png "Sky with lighting.fx在「Main」没有设置")
 
 -----
 
