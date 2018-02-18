@@ -118,7 +118,7 @@
     | 文件名                  | 说明            |
     | :-------------------------- | :--------------- |
     | PSSM1～4.fx                 | PSSM设置      |
-    | SSAO visibility 0.0～1.0.fx | SSAO密度设置 |
+    | SSAO visibility 0.0～1.0.fx | SSAO可见度设置 |
 
 * ## Skybox文件夹
     * MMD天空球预设，用作环境光源提供。详细请参考7.[天空球控制](skybox.md)

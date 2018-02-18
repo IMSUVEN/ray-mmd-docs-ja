@@ -4,7 +4,7 @@
 原文档来自于@gaj-cg的[日文说明文档](https://github.com/gaj-cg/ray-mmd-docs-ja)的wiki内容
 已在[Twitter](https://twitter.com/suven1890753451/status/963678687773319170)上向gaj-cg授权
 该文档在原文档少的部分进行了补充
-### 目前已适配到Ray 1.5.0
+### 目前已适配到Ray 1.5.1
 ## 目录
 - 1.[介绍](Word/introduction.md)
 - 2.[下载](Word/download.md)

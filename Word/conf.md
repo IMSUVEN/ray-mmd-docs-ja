@@ -35,67 +35,67 @@ Sun light
     | 光的位置 高 | [![5_SUN_LIGHT_ENABLE_0_1](../Pic/5_SUN_LIGHT_ENABLE_0_1s.png)](../Pic/5_SUN_LIGHT_ENABLE_0_1.png) | [![5_SUN_LIGHT_ENABLE_1_1](../Pic/5_SUN_LIGHT_ENABLE_1_1s.png)](../Pic/5_SUN_LIGHT_ENABLE_1_1.png) | [![5_SUN_LIGHT_ENABLE_2_1](../Pic/5_SUN_LIGHT_ENABLE_2_1s.png)](../Pic/5_SUN_LIGHT_ENABLE_2_1.png) |
     | 光的位置 低 |  | [![5_SUN_LIGHT_ENABLE_1_2](../Pic/5_SUN_LIGHT_ENABLE_1_2s.png)](../Pic/5_SUN_LIGHT_ENABLE_1_2.png) | [![5_SUN_LIGHT_ENABLE_2_2](../Pic/5_SUN_LIGHT_ENABLE_2_2s.png)](../Pic/5_SUN_LIGHT_ENABLE_2_2.png) |
 
-    ※スクリーンショットはクリックで拡大表示されます。
+    ※点击图片放大来显示详细的图形。
 
     ### `SUN_SHADOW_QUALITY`
-    太陽光が作る影のクォリティ設定。数値が大きいほど影のクォリティは高くなりますが、使用するVRAMも増え処理速度に影響します。スペックの低いPCではクォリティと引き換えに、設定を下げる検討をすると良いかもしれません。  
+    阳光下阴影的质量设置，数字越大，阴影质量越高，但使用的内存越多，对电脑的要求就越高。对于低性能电脑推荐降低数字来提高渲染速度。  
 
-    `0` ：影なし  
+    `0` ：None  
     `1` ：Low    ( 512 * 4)  
     `2` ：Medium (1024 * 4)  
-    `3` ：High   (2048 * 4)　(デフォルト)  
+    `3` ：High   (2048 * 4)　(默认)  
     `4` ：boom!  (4096 * 4)  
     `5` ：boom!! (8192 * 4)  
 
     | SUN_SHADOW_QUALITY 1 | SUN_SHADOW_QUALITY 2 | SUN_SHADOW_QUALITY 3 | SUN_SHADOW_QUALITY 4 | SUN_SHADOW_QUALITY 5 |
     | :- | :- | :- | :- | :- |
-    | [![5_SUN_SHADOW_QUALITY_1](../Pic/5_SUN_SHADOW_QUALITY_1s.png)](../Pic/5_SUN_SHADOW_QUALITY_1.png) | [![5_SUN_SHADOW_QUALITY_2](../Pic/5_SUN_SHADOW_QUALITY_2s.png)](../Pic/5_SUN_SHADOW_QUALITY_2.png) | [![5_SUN_SHADOW_QUALITY_3](../Pic/5_SUN_SHADOW_QUALITY_3s.png)](../Pic/5_SUN_SHADOW_QUALITY_3.png) | [![5_SUN_SHADOW_QUALITY_4](../Pic/5_SUN_SHADOW_QUALITY_4s.png)](../Pic/5_SUN_SHADOW_QUALITY_4.png) | 残念ながらMacBook AirではOut of video memoryが出て、スクリーンショットを撮ることが出来ませんでした。 |
+    | [![5_SUN_SHADOW_QUALITY_1](../Pic/5_SUN_SHADOW_QUALITY_1s.png)](../Pic/5_SUN_SHADOW_QUALITY_1.png) | [![5_SUN_SHADOW_QUALITY_2](../Pic/5_SUN_SHADOW_QUALITY_2s.png)](../Pic/5_SUN_SHADOW_QUALITY_2.png) | [![5_SUN_SHADOW_QUALITY_3](../Pic/5_SUN_SHADOW_QUALITY_3s.png)](../Pic/5_SUN_SHADOW_QUALITY_3.png) | [![5_SUN_SHADOW_QUALITY_4](../Pic/5_SUN_SHADOW_QUALITY_4s.png)](../Pic/5_SUN_SHADOW_QUALITY_4.png) | 因为我正在做教程的电脑显存不足，无法截图，反正阴影质量会更高，自己脑补一下。 |
 
 Image Based Lighting
 -----
-* SkyboxのUVを反転するかどうかの設定。  
-    元々は`0`のライティングを使用しない設定が有りましたが、IBLは必須になったのでその設定は使われなくなりました。
+* Skybox的UV是否反转的设置。  
+    这个设置主要是为了在使用了你自己的HDR贴图作为空间球时，根据场景情况选择是否反转。
 
     ### `IBL_QUALITY`
 
-    `1` ：反転しない　(デフォルト)  
-    `2` ：UVを反転する
+    `1` ：UV不反转　(默认)  
+    `2` ：UV反转
 
     | IBL_QUALITY 1 | IBL_QUALITY 2 |
     | :- |:- |
     | [![5_IBL_QUALITY_1](../Pic/5_IBL_QUALITY_1s.png)](../Pic/5_IBL_QUALITY_1.png) | [![5_IBL_QUALITY_2](../Pic/5_IBL_QUALITY_2s.png)](../Pic/5_IBL_QUALITY_2.png) |
-    | 元々OpenGL座標系のHDRIなので、Marriottホテルのロゴが反転している | Marriottホテルのロゴが正しく読める |
+    | 原本的贴图的时候，万豪酒店的标志是颠倒的 | 万豪酒店的标志恢复正常 |
 
-    ※ ライトはスカイボックスに合わせて方向を変えています
+    ※ 光照信息根据天空球进行改变
 
 Fog Tab
 -----
-* MMEの「エフェクト割当」で表示されるタブに「FogMap」タブを追加するかどうか。追加しないとフォグが使えない。
+* MME效果分配中的「FogMap」是否开启，如果不开启，额外添加的雾也无法使用。
 
     ### `FOG_ENABLE`
 
-    `0` ：追加しない  
-    `1` ：追加する　(デフォルト)  
+    `0` ：关闭  
+    `1` ：开启　(默认)  
 
 Light Tab
 -----
-* MMEの「エフェクト割当」で表示されるタブに「LightMap」タブを追加するかどうか。追加しないと追加のライトが使えない。
+* MME效果分配中的「LightMap」是否开启，如果不开启，额外添加的灯也无法使用。
 
     ### `MULTI_LIGHT_ENABLE`
 
-    `0` ：追加しない  
-    `1` ：追加する　(デフォルト)  
+    `0` ：关闭  
+    `1` ：开启　(默认)  
 
 Outline Tab
 -----
-* MMEの「エフェクト割当」で表示されるタブに「OutlineMap」タブを追加するかどうか。追加する場合は、アンチエイリアスの種類が選択できる。
+* MME效果分配中的「OutlineMap」是否开启。此项为轮廓线。
 
     ### `OUTLINE_QUALITY`
 
-    `0` ：追加しない　(デフォルト)  
-    `1` ：追加する AA無し  
-    `2` ：追加する + SMAA  
-    `3` ：追加する + SSAA  
+    `0` ：不添加　(默认)  
+    `1` ：无抗锯齿添加  
+    `2` ：添加+抗锯齿SMAA  
+    `3` ：添加+抗锯齿SSAA  
 
     | OUTLINE_QUALITY 0 | OUTLINE_QUALITY 1 | OUTLINE_QUALITY 2 | OUTLINE_QUALITY 3 |
     | :- | :- | :- | :- |
@@ -103,31 +103,30 @@ Outline Tab
 
 Toon-shading material
 -----
-* トゥーンシェーディングを有効にするかどうか。  
-    マテリアルでトゥーンシェーディング（CUSTOM_ENABLE 8または9）を使う場合は有効にする必要があります。
+* 是否启用卡通材质渲染，如果你在材质设置中使用了卡通材质（`CUSTOM_ENABLE 8`或`9`），则需要启用它。
 
     ### `TOON_ENABLE`
 
-    `0` ：無効　(デフォルト)  
-    `1` ：有効  
-    `2` ：有効 + diffusion  
+    `0` ：不开启　(默认)  
+    `1` ：开启  
+    `2` ：开启 + 光扩散
 
     | TOON_ENABLE 0 | TOON_ENABLE 1 | TOON_ENABLE 2 |
     | :- | :- | :- |
     | [![5_TOON_ENABLE_0](../Pic/5_TOON_ENABLE_0s.png)](../Pic/5_TOON_ENABLE_0.png) | [![5_TOON_ENABLE_1](../Pic/5_TOON_ENABLE_1s.png)](../Pic/5_TOON_ENABLE_1.png) | [![5_TOON_ENABLE_2](../Pic/5_TOON_ENABLE_2s.png)](../Pic/5_TOON_ENABLE_2.png) |
 
-    ※ BOKEH_QUALITY 1、OUTLINE_QUALITY 3、マテリアルはCUSTOM_ENABLE 8でCELシェーディングを割り当てています。また、マテリアルは全てのモデルに同一マテリアルを割り当てていて、材質ごとの調整、最適化はしていません。
+    ※ 在`BOKEH_QUALITY 1`、`OUTLINE_QUALITY 3`、`Materials`属性中设置`CUSTOM_ENABLE 8`时的三个选项的预览效果。
 
 Screen Space Directional Occlusion
 -----
-* Screen Space Directional Occlusion(SSDO:ライトの方向を考慮したAO)のクォリティを設定します。  
-    サンプル数が多くなればクオリティは上がりますが、重くなります。
+* Screen Space Directional Occlusion(SSDO:考虑光线方向AO)更加高质量的阴影。有关SSDO的[说明文档](https://www.slideshare.net/ozlael/mssao-presentation)  
+    数值越高，效果越好，要求的性能越强。
 
     ### `SSDO_QUALITY`
 
-    `0` ：SSDO無し  
+    `0` ：无SSDO  
     `1` ： 8 samples  
-    `2` ：12 samples　(デフォルト)  
+    `2` ：12 samples　(默认)  
     `3` ：16 samples  
     `4` ：20 samples  
     `5` ：24 samples  
@@ -138,12 +137,12 @@ Screen Space Directional Occlusion
     | [![5_SSDO_QUALITY_0](../Pic/5_SSDO_QUALITY_0s.png)](../Pic/5_SSDO_QUALITY_0.png) | [![5_SSDO_QUALITY_1](../Pic/5_SSDO_QUALITY_1s.png)](../Pic/5_SSDO_QUALITY_1.png) | [![5_SSDO_QUALITY_2](../Pic/5_SSDO_QUALITY_2s.png)](../Pic/5_SSDO_QUALITY_2.png) | [![5_SSDO_QUALITY_3](../Pic/5_SSDO_QUALITY_3s.png)](../Pic/5_SSDO_QUALITY_3.png) | [![5_SSDO_QUALITY_4](../Pic/5_SSDO_QUALITY_4s.png)](../Pic/5_SSDO_QUALITY_4.png) | [![5_SSDO_QUALITY_5](../Pic/5_SSDO_QUALITY_5s.png)](../Pic/5_SSDO_QUALITY_5.png) | [![5_SSDO_QUALITY_6](../Pic/5_SSDO_QUALITY_6s.png)](../Pic/5_SSDO_QUALITY_6.png) |
 
 
-    ※ 効果がわかりやすいように、SUN_SHADOW_QUALITY 0、コントローラーのSSAO- 1、SSDO+ 3に設定しています。
+    ※ 为了让对比更加明显，我设置了SUN_SHADOW_QUALITY 0、控制器SSAO- 1、SSDO+ 3的设定。
 
 Screen Space Reflection
 -----
-* Screen Space Reflection(SSR)のクォリティを設定します。  
-    サンプル数が多くなればクオリティは上がりますが、重くなります。
+* Screen Space Reflection(SSR)屏幕空间反射(镜面反光)。  
+    随着数值的增加，效果更好，要求的性能越强。
     ### `SSR_QUALITY`
 
     `0` ：SSR無し　(デフォルト)  
@@ -157,67 +156,65 @@ Screen Space Reflection
 
 Screen Space Subsurface Scattering
 -----
-* Screen Space Subsurface Scattering(SSSSS)を使うかどうか。  
-    サブサーフェススキャッタリングは肌のマテリアルなどに使われます。
+* Screen Space Subsurface Scattering(SSSSS)屏幕空间次表面散射。  
+    用于皮肤、玉器等效果的制作，效果请自己拿一个手电筒压在手指上照射，手指透过的红色便是这种效果。
 
     ### `SSSS_QUALITY`
 
-    `0` ：無効  
-    `1` ：有効　(デフォルト)  
+    `0` ：关闭  
+    `1` ：开启　(默认)  
 
 Bokeh
 -----
-* DOF (Depth of Field:被写界深度)を有効にするかどうか。  
-    調整は`ray_controller.pmx`で行います。
+* DOF (Depth of Field:景深)景深效果。  
+    其余的设置请参考`ray_controller.pmx`的设置。
 
     ### `BOKEH_QUALITY`
 
-    `0` ：無効　(デフォルト)  
-    `1` ：有効  
+    `0` ：关闭　(默认)  
+    `1` ：开启  
 
     | BOKEH_QUALITY 0 | BOKEH_QUALITY 1 |
     | :- | :- |
     | [![5_BOKEH_QUALITY_0](../Pic/5_BOKEH_QUALITY_0s.png)](../Pic/5_BOKEH_QUALITY_0.png) | [![5_BOKEH_QUALITY_1](../Pic/5_BOKEH_QUALITY_1s.png)](../Pic/5_BOKEH_QUALITY_1.png) |
-    |  | ボケ具合はray_controllerで調整しています |
+    |  |使用ray_controller调整不同的景深效果 |
 
 Eye Adaptation
 -----
-* Eye Adaptation (Auto-Exposure・自動露光・明暗順応)を有効にするかどうか。  
-    Eye Adaptationは、明るい場所から暗い場所、またはその逆において、人間の目やカメラが明るさに時間経過とともに順応する時の効果です。  
+* Eye Adaptation (Auto-Exposure・自动曝光・明暗适应)启用人眼适应。  
+    Eye Adaptation指的是人眼的光暗自动适应效果，请参考你刚从洞窟中走出眼前一片白光，和刚进入洞窟眼前一片漆黑，过一段时间能正常看清的效果。  具体请参考英文[说明文档](https://docs.unrealengine.com/latest/INT/Engine/Rendering/PostProcessEffects/AutomaticExposure/index.html)
 
     ### `HDR_EYE_ADAPTATION`
 
-    `0` ：無効　(デフォルト)  
-    `1` ：有効　ISO 100 中間グレイを12.7%とする  
-    `2` ：有効　ISO 100 中間グレイを18.0%とする（標準反射率
-）  
+    `0` ：关闭　(默认)  
+    `1` ：开启　ISO 100 中间灰度值为12.7%  
+    `2` ：开启　ISO 100 中间灰度值为18.0%（标准反射率）  
 
 Bloom
 -----
-* ブルームのモード
+* 曝光
 
     ### `HDR_BLOOM_MODE`
-
-    `0` ：無効  
-    `1` ：inf                                 : 1.0.0より前のバージョンと同等  
-    `2` ：saturate                            : 1.0.0と同等  
-    `3` ：luminance & exposure                : 1.2.0と同等  
-    `4` ：saturate & exposure　(デフォルト)   : 1.3.0以降  
-
+具体请参考英文[说明文档](http://kalogirou.net/2006/05/20/how-to-do-good-bloom-for-hdr-rendering/)
+    `0` ：关闭  
+    `1` ：inf                                 : 1.0.0以前的效果  
+    `2` ：saturate                            : 1.0.0版本时的效果  
+    `3` ：luminance & exposure                : 1.2.0版时的效果  
+    `4` ：saturate & exposure　(默认)   : 1.3.0以上版本的效果
     | HDR_BLOOM_MODE 0 | HDR_BLOOM_MODE 1 | HDR_BLOOM_MODE 2 | HDR_BLOOM_MODE 3 | HDR_BLOOM_MODE 4 |
     | :- | :- | :- | :- | :- |
     | [![5_HDR_BLOOM_MODE_0](../Pic/5_HDR_BLOOM_MODE_0s.png)](../Pic/5_HDR_BLOOM_MODE_0.png) | [![5_HDR_BLOOM_MODE_1](../Pic/5_HDR_BLOOM_MODE_1s.png)](../Pic/5_HDR_BLOOM_MODE_1.png) | [![5_HDR_BLOOM_MODE_2](../Pic/5_HDR_BLOOM_MODE_2s.png)](../Pic/5_HDR_BLOOM_MODE_2.png) | [![5_HDR_BLOOM_MODE_3](../Pic/5_HDR_BLOOM_MODE_3s.png)](../Pic/5_HDR_BLOOM_MODE_3.png) | [![5_HDR_BLOOM_MODE_4](../Pic/5_HDR_BLOOM_MODE_4s.png)](../Pic/5_HDR_BLOOM_MODE_4.png) |
 
 Simple lensflare
 -----
-* レンズフレアのモード。１～３はレンズフレアONで、発生するフレアの色味が異なる。
+* 镜头光晕开启和颜色设置。
 
     ### `HDR_FLARE_MODE`
 
-    `0` ：無効　(デフォルト)  
-    `1` ：Blue （フレアが青みがかる）  
-    `2` ：Orange （フレアがオレンジがかる）  
-    `3` ：Auto （光源と同じ色のフレア）  
+    `0` ：关闭　(默认)  
+    `1` ：Blue （耀斑为蓝）  
+    `2` ：Orange （耀斑为橙）  
+    `3` ：Auto （耀斑与光源同色）  
 
     | HDR_FLARE_MODE 0 | HDR_FLARE_MODE 1 | HDR_FLARE_MODE 2 | HDR_FLARE_MODE 3 |
     | :- | :- | :- | :- |
@@ -226,11 +223,11 @@ Simple lensflare
 
 Simple glare star
 -----
-* レンズフレアで発生する光芒（光条）のタイプ
+* 由镜头眩光产生的光线类型
 
     ### `HDR_STAR_MODE`
 
-    `0` ：無効　(デフォルト)  
+    `0` ：关闭　(默认)  
     `1` ：Anamorphic Lens Flares // blue  
     `2` ：Anamorphic Lens Flares // auto  
     `3` ：Glare star // orange  
@@ -243,8 +240,8 @@ Simple glare star
 
 Tonemapping
 -----
-* トーンマッピングのモード。  
-    ray-mmd内部でHDR処理された画像データはトーンマッピングを経てLDRに変換されモニタで確認することが出来ます。そのトーンマッピングのタイプを選択します。
+* 色调映射模式。  
+    ray-mmd内部处理的图像数据HDR通过转换为LDR，并在显示器上显示，请选择色调映射的模式。
 
     ### `HDR_TONEMAP_OPERATOR`
 
@@ -252,7 +249,7 @@ Tonemapping
     `1` ：Reinhard  
     `2` ：Hable  
     `3` ：Uncharted2  
-    `4` ：Hejl2015　(デフォルト)  
+    `4` ：Hejl2015　(默认)  
     `5` ：ACES-sRGB  
     `6` ：NaughtyDog  
 
@@ -262,14 +259,13 @@ Tonemapping
 
 Anti-Aliasing
 -----
-* アンチエイリアスのタイプを選択します。  
-    FXAAとSMAAの違いはざっくりと言えば、FXAA：軽いが精度はイマイチ、SMAA:FXAAに対して重くなるが精度は上がる、という感じです。  
-    参考：[SMAA: Enhanced Subpixel Morphological Antialiasing](http://www.iryoku.com/smaa/)に有る動画で概ねどんな感じかはわかると思います。
+* 抗锯齿效果。  
+    FXAA的性能消耗比较低，精度也较低，SMAA的精度更高，性能要求也更高，SMAA可能在AMD显卡上不支持。
 
     ### `AA_QUALITY`
 
-    `0` ：無効  
-    `1` ：FXAA　(デフォルト)  
+    `0` ：关闭  
+    `1` ：FXAA　(默认)  
     `2` ：SMAAx1-medium // maybe, AMD graphics card does not support  
     `3` ：SMAAx1-high  
     `4` ：SMAAx2-medium  
@@ -279,9 +275,21 @@ Anti-Aliasing
     | :- | :- | :- | :- | :- | :- |
     | [![5_AA_QUALITY_0](../Pic/5_AA_QUALITY_0s.png)](../Pic/5_AA_QUALITY_0.png) | [![5_AA_QUALITY_1](../Pic/5_AA_QUALITY_1s.png)](../Pic/5_AA_QUALITY_1.png) | [![5_AA_QUALITY_2](../Pic/5_AA_QUALITY_2s.png)](../Pic/5_AA_QUALITY_2.png) | [![5_AA_QUALITY_3](../Pic/5_AA_QUALITY_3s.png)](../Pic/5_AA_QUALITY_3.png) | [![5_AA_QUALITY_4](../Pic/5_AA_QUALITY_4s.png)](../Pic/5_AA_QUALITY_4.png) | [![5_AA_QUALITY_5](../Pic/5_AA_QUALITY_5s.png)](../Pic/5_AA_QUALITY_5.png) |
 
+Postprocess Dispersion
+-----
+* 后处理色散
+	色散颜色调整
+
+    ### `Postprocess Dispersion`
+
+    `0` ：关闭  
+    `1` ：色移　(默认)  
+    `2` ：色差 
+
+	|Postprocess Dispersion 0|Postprocess Dispersion 1|Postprocess Dispersion2|:-|:-|:-| [![5_Postprocess_Dispersion_0](../Pic/5_Postprocess_Dispersion_0s.png)](../Pic/5_Postprocess_Dispersion_0.png) | [![5_Postprocess_Dispersion_1](../Pic/5_Postprocess_Dispersion_1s.png)](../Pic/5_Postprocess_Dispersion_1.png) | [![5_Postprocess_Dispersion_2](../Pic/5_Postprocess_Dispersion_2s.png)](../Pic/5_Postprocess_Dispersion_2.png) 
 
 
-# ray_advanced.confの設定
+# ray_advanced.conf的设置
     static const float mLightIntensityMin = 1.0;
     static const float mLightIntensityMax = 10.0;
     static const float mLightDistance = 1000;
@@ -327,4 +335,4 @@ Anti-Aliasing
 
 -----
 
-<small> Model : Hatsune Miku V4X Model by Digitrevx / Japanese Otaku City by ZENRIN / S_N_Fes ステージ by cubp / トレーニングステージ by 名無し </small>
+<small> Model : Hatsune Miku V4X Model by Digitrevx / Japanese Otaku City by ZENRIN / S_N_Fes ステージ by cubp / トレーニングステージ by 名無し </br>感谢gaj-cg教程中出现的大部分图片可以直接使用</small>
