@@ -1,7 +1,7 @@
 # ·Ray的全局设置和MME效果分配
 [返回目录](../ReadMe.md) 
 </br>
-[上一章 3.各文件夹说明](started.md)
+[上一章 4.入门使用](started.md)
 ## 说明
 本章介绍了Ray.conf和ray_advanced.conf以及MME不同选项卡的不同用处。
 ## 全局设置
