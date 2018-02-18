@@ -278,7 +278,7 @@ Anti-Aliasing
 Postprocess Dispersion
 -----
 * 后处理色散
-	色散颜色调整
+	控制器中左下表情Dispersion（色散）的表现方式
 
     ### `Postprocess Dispersion`
 
@@ -289,6 +289,8 @@ Postprocess Dispersion
 	| Postprocess_Dispersion 0 | Postprocess_Dispersion 1 | Postprocess_Dispersion 2 |
 	| :- | :- | :- |
 	| [![5_Postprocess_Dispersion_0](../Pic/5_Postprocess_Dispersion_0s.png)](../Pic/5_Postprocess_Dispersion_0.png) | [![5_Postprocess_Dispersion_1](../Pic/5_Postprocess_Dispersion_1s.png)](../Pic/5_Postprocess_Dispersion_1.png) | [![5_Postprocess_Dispersion_2](../Pic/5_Postprocess_Dispersion_2s.png)](../Pic/5_Postprocess_Dispersion_2.png) |
+
+	※ 为了让对比更加明显，我设置了控制器Dispersion+1的设定。
 
 
 # ray_advanced.conf的设置
