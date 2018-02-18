@@ -196,6 +196,7 @@ Bloom
 
     ### `HDR_BLOOM_MODE`
 具体请参考英文[说明文档](http://kalogirou.net/2006/05/20/how-to-do-good-bloom-for-hdr-rendering/)
+
     `0` ：关闭  
     `1` ：inf                                 : 1.0.0以前的效果  
     `2` ：saturate                            : 1.0.0版本时的效果  
