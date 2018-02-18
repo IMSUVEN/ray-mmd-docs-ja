@@ -37,8 +37,12 @@ Sun light
 
     ※点击图片放大来显示详细的图形。
 
+SUN_SHADOW_QUALITY
+-----
+    阳光下阴影的质量设置，数字越大，阴影质量越高，但使用的内存越多，对电脑的要求就越高。对于低性能电脑推荐降低数字来提高渲染速度。
+
     ### `SUN_SHADOW_QUALITY`
-    阳光下阴影的质量设置，数字越大，阴影质量越高，但使用的内存越多，对电脑的要求就越高。对于低性能电脑推荐降低数字来提高渲染速度。  
+  
 
     `0` ：None  
     `1` ：Low    ( 512 * 4)  
@@ -192,11 +196,11 @@ Eye Adaptation
 
 Bloom
 -----
-* 曝光
+* 光溢出
 
     ### `HDR_BLOOM_MODE`
 	
-	具体请参考英文[说明文档](http://kalogirou.net/2006/05/20/how-to-do-good-bloom-for-hdr-rendering/)
+	具体请参考英文[说明文档](http://kalogirou.net/2006/05/20/how-to-do-good-bloom-for-hdr-rendering/)或中文[说明文档](https://docs.unrealengine.com/latest/CHN/Engine/Rendering/PostProcessEffects/Bloom/index.html)
 	
 	`0` ：关闭  
     `1` ：inf                                 : 1.0.0以前的效果  
@@ -340,6 +344,28 @@ Postprocess Dispersion
     static const float mFXAAQualitySubpix = 0.5;
     static const float mFXAAQualityEdgeThreshold = 0.166;
     static const float mFXAAQualityEdgeThresholdMin = 0.0333;
+
+
+- ## MME的「效果分配」说明
+
+
+当使用ray-mmd后，MME的「效果分配」的各个选项卡需要自行设置`.fx`。`ray.conf`会使某个选项卡删除或增加。  
+　有关应该在各个选项卡上分配的fx应该如何设置，请参考各章的说明。
+
+
+| 选项卡名字      | 选项卡名称                     | 说明   |
+| :---------- | :------------------------------- | :- |
+| Main        | Main Render Target               | 对材质的宏观设定，具体请参考[11.Main设置](main.md)
+| FogMap      | Multi volumetric fog for ray     |ray.conf中有该选项卡的开关， 添加「Fog」文件夹中的雾或加入带有雾的Skybox中，设置雾属性的选项卡，具体设置请参考[10.雾](fog.md)
+| LightMap    | Multi light source for ray       | ray.conf中有该选项卡的开关，添加「Lighting」文件夹中的灯，设置灯属性的选项卡，具体设置请参考[9.光源](light.md)
+| EnvLightMap | Image-based-lighting map for ray | 添加「Skybox」文件夹中的skybox后，添加skybox的光照信息的选项卡，具体请参考[7.天空球控制](skybox.md)
+| MaterialMap | Material cache map for ray       | 添加「Material」中的材质文件或自制的材质文件，具体请参考[8.材质设定](materials.md)。
+| OutlineMap  | Outline shading for ray          | ray.conf中有该选项卡的开关，轮廓线设置，可以在「Outline」文件夹中选择轮廓线的样式，具体请参考[13.轮廓线](outline.md)
+| SSAOMap     | SSAO visibility for ray          | 阴影可见度设置，添加「Shadow」文件夹中的SSAO visibility～的fx文件来设置，默认为`SSAO visibility 1.0.fx`，具体请参考[12.阴影](shadow.md)
+| PSSM1～4    | cascade shadow map for ray       | 来自阳关阴影的设定，无需更改，具体请参考[12.阴影](shadow.md) |
+
+如果你加入的光源的`.fx`是带有阴影的，则会添加阴影贴图选项卡，具体信息请参考[9.光源](light.md)。
+
 
 -----
 
