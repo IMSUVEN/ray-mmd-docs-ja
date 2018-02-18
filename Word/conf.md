@@ -201,7 +201,8 @@ Bloom
     `2` ：saturate                            : 1.0.0版本时的效果  
     `3` ：luminance & exposure                : 1.2.0版时的效果  
     `4` ：saturate & exposure　(默认)   : 1.3.0以上版本的效果
-    | HDR_BLOOM_MODE 0 | HDR_BLOOM_MODE 1 | HDR_BLOOM_MODE 2 | HDR_BLOOM_MODE 3 | HDR_BLOOM_MODE 4 |
+   
+	| HDR_BLOOM_MODE 0 | HDR_BLOOM_MODE 1 | HDR_BLOOM_MODE 2 | HDR_BLOOM_MODE 3 | HDR_BLOOM_MODE 4 |
     | :- | :- | :- | :- | :- |
     | [![5_HDR_BLOOM_MODE_0](../Pic/5_HDR_BLOOM_MODE_0s.png)](../Pic/5_HDR_BLOOM_MODE_0.png) | [![5_HDR_BLOOM_MODE_1](../Pic/5_HDR_BLOOM_MODE_1s.png)](../Pic/5_HDR_BLOOM_MODE_1.png) | [![5_HDR_BLOOM_MODE_2](../Pic/5_HDR_BLOOM_MODE_2s.png)](../Pic/5_HDR_BLOOM_MODE_2.png) | [![5_HDR_BLOOM_MODE_3](../Pic/5_HDR_BLOOM_MODE_3s.png)](../Pic/5_HDR_BLOOM_MODE_3.png) | [![5_HDR_BLOOM_MODE_4](../Pic/5_HDR_BLOOM_MODE_4s.png)](../Pic/5_HDR_BLOOM_MODE_4.png) |
 
