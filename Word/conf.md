@@ -53,7 +53,7 @@ SUN_SHADOW_QUALITY
 
     | SUN_SHADOW_QUALITY 1 | SUN_SHADOW_QUALITY 2 | SUN_SHADOW_QUALITY 3 | SUN_SHADOW_QUALITY 4 | SUN_SHADOW_QUALITY 5 |
     | :- | :- | :- | :- | :- |
-    | [![5_SUN_SHADOW_QUALITY_1](../Pic/5_SUN_SHADOW_QUALITY_1s.png)](../Pic/5_SUN_SHADOW_QUALITY_1.png) | [![5_SUN_SHADOW_QUALITY_2](../Pic/5_SUN_SHADOW_QUALITY_2s.png)](../Pic/5_SUN_SHADOW_QUALITY_2.png) | [![5_SUN_SHADOW_QUALITY_3](../Pic/5_SUN_SHADOW_QUALITY_3s.png)](../Pic/5_SUN_SHADOW_QUALITY_3.png) | [![5_SUN_SHADOW_QUALITY_4](../Pic/5_SUN_SHADOW_QUALITY_4s.png)](../Pic/5_SUN_SHADOW_QUALITY_4.png) | 因为我正在做教程的电脑显存不足，无法截图，反正阴影质量会更高，自己脑补一下。 |
+    | [![5_SUN_SHADOW_QUALITY_1](../Pic/5_SUN_SHADOW_QUALITY_1s.png)](../Pic/5_SUN_SHADOW_QUALITY_1.png) | [![5_SUN_SHADOW_QUALITY_2](../Pic/5_SUN_SHADOW_QUALITY_2s.png)](../Pic/5_SUN_SHADOW_QUALITY_2.png) | [![5_SUN_SHADOW_QUALITY_3](../Pic/5_SUN_SHADOW_QUALITY_3s.png)](../Pic/5_SUN_SHADOW_QUALITY_3.png) | [![5_SUN_SHADOW_QUALITY_4](../Pic/5_SUN_SHADOW_QUALITY_4s.png)](../Pic/5_SUN_SHADOW_QUALITY_4.png) | 因为电脑内存不足，无法输出这张图片，自己比较前面就好了。 |
 
 Image Based Lighting
 -----
