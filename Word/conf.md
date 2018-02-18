@@ -286,7 +286,7 @@ Postprocess Dispersion
     `1` ：色移　(默认)  
     `2` ：色差 
 
-	| Postprocess Dispersion 0 | Postprocess Dispersion 1 | Postprocess Dispersion2 | :- | :- | :- | [![5_Postprocess_Dispersion_0](../Pic/5_Postprocess_Dispersion_0s.png)](../Pic/5_Postprocess_Dispersion_0.png) | [![5_Postprocess_Dispersion_1](../Pic/5_Postprocess_Dispersion_1s.png)](../Pic/5_Postprocess_Dispersion_1.png) | [![5_Postprocess_Dispersion_2](../Pic/5_Postprocess_Dispersion_2s.png)](../Pic/5_Postprocess_Dispersion_2.png) |
+	| Postprocess_Dispersion 0 | Postprocess_Dispersion 1 | Postprocess_Dispersion 2 | :- | :- | :- | [![5_Postprocess_Dispersion_0](../Pic/5_Postprocess_Dispersion_0s.png)](../Pic/5_Postprocess_Dispersion_0.png) | [![5_Postprocess_Dispersion_1](../Pic/5_Postprocess_Dispersion_1s.png)](../Pic/5_Postprocess_Dispersion_1.png) | [![5_Postprocess_Dispersion_2](../Pic/5_Postprocess_Dispersion_2s.png)](../Pic/5_Postprocess_Dispersion_2.png) |
 
 
 # ray_advanced.conf的设置
